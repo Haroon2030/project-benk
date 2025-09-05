@@ -1,0 +1,126 @@
+<svg width="350" height="280" viewBox="0 0 350 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="350" height="280" fill="url(#aiBg)"/>
+  
+  <!-- Main AI Head -->
+  <circle cx="175" cy="140" r="80" fill="url(#headGrad)" stroke="url(#headStroke)" stroke-width="3"/>
+  
+  <!-- Brain Pattern -->
+  <path d="M120 100 Q140 80 160 100 Q180 80 200 100 Q220 80 240 100" stroke="url(#brainPattern)" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M130 130 Q150 110 170 130 Q190 110 210 130" stroke="url(#brainPattern)" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M140 160 Q160 140 180 160 Q200 140 220 160" stroke="url(#brainPattern)" stroke-width="3" fill="none" opacity="0.7"/>
+  
+  <!-- Eyes -->
+  <circle cx="155" cy="125" r="12" fill="url(#eyeGrad)"/>
+  <circle cx="195" cy="125" r="12" fill="url(#eyeGrad)"/>
+  <circle cx="155" cy="125" r="6" fill="white"/>
+  <circle cx="195" cy="125" r="6" fill="white"/>
+  
+  <!-- Neural Network -->
+  <g opacity="0.8">
+    <!-- Nodes -->
+    <circle cx="80" cy="80" r="8" fill="url(#nodeGrad)"/>
+    <circle cx="60" cy="140" r="6" fill="url(#nodeGrad)"/>
+    <circle cx="90" cy="200" r="7" fill="url(#nodeGrad)"/>
+    <circle cx="270" cy="60" r="9" fill="url(#nodeGrad)"/>
+    <circle cx="290" cy="120" r="6" fill="url(#nodeGrad)"/>
+    <circle cx="260" cy="180" r="8" fill="url(#nodeGrad)"/>
+    
+    <!-- Connections -->
+    <line x1="80" y1="80" x2="120" y2="100" stroke="url(#connectionGrad)" stroke-width="2"/>
+    <line x1="60" y1="140" x2="95" y2="140" stroke="url(#connectionGrad)" stroke-width="2"/>
+    <line x1="90" y1="200" x2="130" y2="180" stroke="url(#connectionGrad)" stroke-width="2"/>
+    <line x1="270" y1="60" x2="230" y2="100" stroke="url(#connectionGrad)" stroke-width="2"/>
+    <line x1="290" y1="120" x2="255" y2="140" stroke="url(#connectionGrad)" stroke-width="2"/>
+    <line x1="260" y1="180" x2="220" y2="160" stroke="url(#connectionGrad)" stroke-width="2"/>
+  </g>
+  
+  <!-- Data Flow -->
+  <g>
+    <rect x="30" y="30" width="60" height="20" rx="10" fill="url(#dataGrad)" opacity="0.9">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="60" y="43" text-anchor="middle" fill="white" font-family="Arial" font-size="10" font-weight="bold">البيانات</text>
+    
+    <rect x="260" y="220" width="70" height="20" rx="10" fill="url(#resultGrad)" opacity="0.9">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="295" y="233" text-anchor="middle" fill="white" font-family="Arial" font-size="10" font-weight="bold">التوصيات</text>
+  </g>
+  
+  <!-- Processing Indicators -->
+  <g>
+    <circle cx="175" cy="70" r="5" fill="url(#processGrad)">
+      <animate attributeName="r" values="3;8;3" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="175" cy="210" r="5" fill="url(#processGrad)">
+      <animate attributeName="r" values="3;8;3" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Floating Icons -->
+  <g opacity="0.7">
+    <circle cx="40" cy="180" r="20" fill="url(#iconBg)" opacity="0.3"/>
+    <text x="40" y="185" text-anchor="middle" fill="url(#iconColor)" font-family="Arial" font-size="16">💳</text>
+    
+    <circle cx="310" cy="50" r="20" fill="url(#iconBg)" opacity="0.3"/>
+    <text x="310" y="55" text-anchor="middle" fill="url(#iconColor)" font-family="Arial" font-size="16">💰</text>
+    
+    <circle cx="50" cy="240" r="20" fill="url(#iconBg)" opacity="0.3"/>
+    <text x="50" y="245" text-anchor="middle" fill="url(#iconColor)" font-family="Arial" font-size="16">📊</text>
+  </g>
+  
+  <defs>
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="headGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="50%" style="stop-color:#764ba2"/>
+      <stop offset="100%" style="stop-color:#f093fb"/>
+    </linearGradient>
+    <linearGradient id="headStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe"/>
+      <stop offset="100%" style="stop-color:#00f2fe"/>
+    </linearGradient>
+    <linearGradient id="brainPattern" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="connectionGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="dataGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="resultGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+    <linearGradient id="processGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="iconColor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+  </defs>
+</svg>

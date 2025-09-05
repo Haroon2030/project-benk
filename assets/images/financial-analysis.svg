@@ -1,0 +1,140 @@
+<svg width="320" height="240" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="320" height="240" fill="url(#analysisBg)"/>
+  
+  <!-- Dashboard Frame -->
+  <rect x="20" y="30" width="280" height="180" rx="12" fill="white" stroke="url(#dashStroke)" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="30" y="40" width="260" height="30" rx="6" fill="url(#headerGrad)"/>
+  <text x="160" y="58" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">التحليل المالي الذكي</text>
+  
+  <!-- Charts Container -->
+  <rect x="35" y="80" width="120" height="80" rx="6" fill="url(#chartBg)" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="95" y="95" text-anchor="middle" fill="url(#textGrad)" font-family="Arial" font-size="10" font-weight="bold">الإنفاق الشهري</text>
+  
+  <!-- Pie Chart -->
+  <circle cx="95" cy="125" r="25" fill="none" stroke="url(#pieGrad1)" stroke-width="8" 
+          stroke-dasharray="31.4 78.5" transform="rotate(-90 95 125)"/>
+  <circle cx="95" cy="125" r="25" fill="none" stroke="url(#pieGrad2)" stroke-width="8"
+          stroke-dasharray="47.1 62.8" stroke-dashoffset="-31.4" transform="rotate(-90 95 125)"/>
+  <circle cx="95" cy="125" r="25" fill="none" stroke="url(#pieGrad3)" stroke-width="8"
+          stroke-dasharray="31.4 78.5" stroke-dashoffset="-78.5" transform="rotate(-90 95 125)"/>
+  
+  <!-- Line Chart -->
+  <rect x="165" y="80" width="120" height="80" rx="6" fill="url(#chartBg)" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="225" y="95" text-anchor="middle" fill="url(#textGrad)" font-family="Arial" font-size="10" font-weight="bold">نمو الادخار</text>
+  
+  <!-- Chart Lines -->
+  <polyline points="175,145 190,135 205,130 220,120 235,115 250,105 265,100 275,95" 
+            fill="none" stroke="url(#lineGrad)" stroke-width="3"/>
+  <polyline points="175,150 190,148 205,145 220,140 235,138 250,135 265,130 275,125" 
+            fill="none" stroke="url(#lineGrad2)" stroke-width="2" stroke-dasharray="3,3"/>
+  
+  <!-- Data Points -->
+  <circle cx="190" cy="135" r="3" fill="url(#pointGrad)"/>
+  <circle cx="220" cy="120" r="3" fill="url(#pointGrad)"/>
+  <circle cx="250" cy="105" r="3" fill="url(#pointGrad)"/>
+  <circle cx="275" cy="95" r="3" fill="url(#pointGrad)"/>
+  
+  <!-- Stats Cards -->
+  <rect x="35" y="170" width="70" height="30" rx="6" fill="url(#statGrad1)"/>
+  <text x="70" y="185" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">+15%</text>
+  <text x="70" y="195" text-anchor="middle" fill="white" font-family="Arial" font-size="8">ادخار</text>
+  
+  <rect x="115" y="170" width="70" height="30" rx="6" fill="url(#statGrad2)"/>
+  <text x="150" y="185" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">-8%</text>
+  <text x="150" y="195" text-anchor="middle" fill="white" font-family="Arial" font-size="8">إنفاق</text>
+  
+  <rect x="195" y="170" width="70" height="30" rx="6" fill="url(#statGrad3)"/>
+  <text x="230" y="185" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">92%</text>
+  <text x="230" y="195" text-anchor="middle" fill="white" font-family="Arial" font-size="8">هدف</text>
+  
+  <!-- AI Recommendations -->
+  <rect x="35" y="210" width="250" height="20" rx="10" fill="url(#recommendGrad)" opacity="0.9"/>
+  <text x="50" y="222" fill="white" font-family="Arial" font-size="10" font-weight="bold">💡 توصية ذكية: يمكنك توفير 450 ريال هذا الشهر</text>
+  
+  <!-- Floating Analytics -->
+  <g opacity="0.8">
+    <circle cx="50" cy="60" r="15" fill="url(#floatGrad)" opacity="0.7">
+      <animate attributeName="cy" values="60;50;60" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="50" y="65" text-anchor="middle" fill="white" font-family="Arial" font-size="12">📊</text>
+    
+    <circle cx="270" cy="50" r="15" fill="url(#floatGrad2)" opacity="0.7">
+      <animate attributeName="cy" values="50;40;50" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="270" y="55" text-anchor="middle" fill="white" font-family="Arial" font-size="12">💰</text>
+  </g>
+  
+  <defs>
+    <linearGradient id="analysisBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f1f5f9"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="dashStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="chartBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="pieGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <linearGradient id="pieGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="pieGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="lineGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <linearGradient id="pointGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="statGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="statGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <linearGradient id="statGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="recommendGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="floatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="floatGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,12 +1,56 @@
+// ===== Mobile Performance & Responsiveness =====
+// Detect mobile device
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+// Optimize animations for mobile
+if (isMobile) {
+    document.documentElement.style.setProperty('--transition', 'all 0.2s ease');
+}
+
+// Prevent zoom on input focus (iOS)
+if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    const viewportMeta = document.querySelector('meta[name="viewport"]');
+    if (viewportMeta) {
+        viewportMeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+    }
+}
+
+// Handle orientation change
+window.addEventListener('orientationchange', function() {
+    // Force reflow to fix layout issues
+    setTimeout(function() {
+        window.scrollTo(0, window.scrollY);
+    }, 100);
+});
+
+// Optimize scroll performance
+let ticking = false;
+
+function updateScrollElements() {
+    // Your scroll-based updates here
+    ticking = false;
+}
+
+function requestScrollUpdate() {
+    if (!ticking) {
+        requestAnimationFrame(updateScrollElements);
+        ticking = true;
+    }
+}
+
 // ===== DOM Content Loaded =====
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Initialize AOS (Animate On Scroll)
+    // Initialize AOS with mobile-optimized settings
     AOS.init({
-        duration: 1000,
+        duration: isMobile ? 600 : 1000,
         easing: 'ease-in-out',
         once: true,
-        offset: 100
+        offset: isMobile ? 50 : 100,
+        disable: function() {
+            return window.innerWidth < 768 && window.innerHeight < 600; // Disable on very small screens
+        }
     });
     
     // Initialize all functions
@@ -17,19 +61,173 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollToTop();
     initSmoothScroll();
     initLoadingAnimation();
+    initVideoPlayers();
+    initMobileOptimizations();
 });
 
 // ===== Navbar Scroll Effect =====
 function initNavbar() {
     const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
     
+    // Enhanced scroll effect
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 50) {
             navbar.classList.add('navbar-scrolled');
         } else {
             navbar.classList.remove('navbar-scrolled');
         }
     });
+    
+    // Active link highlighting
+    const sections = document.querySelectorAll('section[id]');
+    
+    window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href && href.includes(current) && current !== '') {
+                link.classList.add('active');
+            }
+        });
+    });
+    
+    // Enhanced dropdown animation
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdown = this.parentElement;
+            const menu = dropdown.querySelector('.dropdown-menu');
+            
+            // Close other dropdowns
+            dropdownMenus.forEach(otherMenu => {
+                if (otherMenu !== menu) {
+                    otherMenu.classList.remove('show');
+                    otherMenu.parentElement.classList.remove('show');
+                }
+            });
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('show');
+            menu.classList.toggle('show');
+        });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+            dropdownMenus.forEach(menu => {
+                menu.classList.remove('show');
+                menu.parentElement.classList.remove('show');
+            });
+        }
+    });
+    
+    // Mobile menu animation
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', function() {
+            // Add pulse effect to toggler
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+            
+            // Animate collapse
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.style.opacity = '0';
+                navbarCollapse.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    navbarCollapse.classList.remove('show');
+                }, 300);
+            } else {
+                navbarCollapse.classList.add('show');
+                setTimeout(() => {
+                    navbarCollapse.style.opacity = '1';
+                    navbarCollapse.style.transform = 'translateY(0)';
+                }, 10);
+            }
+        });
+    }
+    
+    // Smooth hover effects for nav items
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.02)';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            if (!this.classList.contains('active')) {
+                this.style.transform = 'translateY(0) scale(1)';
+            }
+        });
+        
+        // Click effect
+        link.addEventListener('click', function(e) {
+            // Ripple effect
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            ripple.style.position = 'absolute';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(30, 64, 175, 0.3)';
+            ripple.style.transform = 'scale(0)';
+            ripple.style.animation = 'ripple 0.6s linear';
+            ripple.style.left = '50%';
+            ripple.style.top = '50%';
+            ripple.style.width = '20px';
+            ripple.style.height = '20px';
+            ripple.style.marginLeft = '-10px';
+            ripple.style.marginTop = '-10px';
+            ripple.style.pointerEvents = 'none';
+            
+            this.style.position = 'relative';
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+    
+    // Add CSS for ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        .nav-link {
+            overflow: hidden;
+        }
+        
+        .navbar-brand {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .navbar-toggler {
+            position: relative;
+            overflow: hidden;
+        }
+    `;
+    document.head.appendChild(style);
 }
 
 // ===== Animated Counters =====
@@ -494,4 +692,255 @@ if ('ontouchstart' in window) {
     document.head.appendChild(touchCSS);
 }
 
+// ===== Video Players Enhancement =====
+function initVideoPlayers() {
+    const videoCards = document.querySelectorAll('.video-card');
+    const videos = document.querySelectorAll('.video-player');
+    
+    videoCards.forEach((card, index) => {
+        const video = card.querySelector('.video-player');
+        const overlay = card.querySelector('.video-overlay');
+        const playButton = card.querySelector('.play-button');
+        
+        // Play button click
+        if (playButton) {
+            playButton.addEventListener('click', () => {
+                if (video.paused) {
+                    // Pause all other videos
+                    videos.forEach(v => {
+                        if (v !== video) {
+                            v.pause();
+                        }
+                    });
+                    
+                    video.play();
+                    overlay.style.display = 'none';
+                } else {
+                    video.pause();
+                    overlay.style.display = 'flex';
+                }
+            });
+        }
+        
+        // Video events
+        if (video) {
+            video.addEventListener('play', () => {
+                overlay.style.display = 'none';
+                card.classList.add('playing');
+            });
+            
+            video.addEventListener('pause', () => {
+                overlay.style.display = 'flex';
+                card.classList.remove('playing');
+            });
+            
+            video.addEventListener('ended', () => {
+                overlay.style.display = 'flex';
+                card.classList.remove('playing');
+            });
+            
+            // Add loading indicator
+            video.addEventListener('loadstart', () => {
+                overlay.innerHTML = '<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>';
+            });
+            
+            video.addEventListener('canplay', () => {
+                overlay.innerHTML = '<div class="play-button"><i class="fas fa-play"></i></div>';
+            });
+        }
+    });
+    
+    // Intersection Observer for lazy loading
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const video = entry.target;
+                if (video.dataset.src) {
+                    video.src = video.dataset.src;
+                    video.removeAttribute('data-src');
+                }
+                videoObserver.unobserve(video);
+            }
+        });
+    });
+    
+    videos.forEach(video => {
+        if (video.dataset.src) {
+            videoObserver.observe(video);
+        }
+    });
+}
+
+// ===== Mobile-Specific Optimizations =====
+function initMobileOptimizations() {
+    // Touch feedback for buttons
+    const buttons = document.querySelectorAll('.btn, .nav-link, .feature-card');
+    
+    buttons.forEach(button => {
+        if (isTouch) {
+            button.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            button.addEventListener('touchend', function() {
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        }
+    });
+    
+    // Optimize video loading for mobile
+    if (isMobile) {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.setAttribute('preload', 'none');
+            video.setAttribute('playsinline', 'true');
+        });
+    }
+    
+    // Handle mobile menu
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+    
+    // Close mobile menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth < 992) {
+                navbarCollapse.classList.remove('show');
+            }
+        });
+    });
+    
+    // Smooth scroll with offset for mobile
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offsetTop = target.offsetTop - (isMobile ? 80 : 100);
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Prevent body scroll when mobile menu is open
+    const body = document.body;
+    if (navbarToggler) {
+        navbarToggler.addEventListener('click', function() {
+            setTimeout(() => {
+                if (navbarCollapse.classList.contains('show')) {
+                    body.style.overflow = 'hidden';
+                } else {
+                    body.style.overflow = '';
+                }
+            }, 100);
+        });
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', debounce(function() {
+        if (window.innerWidth >= 992) {
+            body.style.overflow = '';
+            navbarCollapse.classList.remove('show');
+        }
+        
+        // Recalculate AOS elements
+        AOS.refresh();
+    }, 250));
+    
+    // Lazy load images for better performance
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                img.classList.add('loaded');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+    
+    // Add loading states for better UX
+    const interactiveElements = document.querySelectorAll('.btn, .video-card, .feature-card');
+    interactiveElements.forEach(element => {
+        element.addEventListener('click', function() {
+            if (!this.classList.contains('loading')) {
+                this.classList.add('loading');
+                setTimeout(() => {
+                    this.classList.remove('loading');
+                }, 2000);
+            }
+        });
+    });
+}
+
+// Debounce function for performance
+function debounce(func, wait, immediate) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            timeout = null;
+            if (!immediate) func(...args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func(...args);
+    };
+}
+
+// Check network connection and adjust accordingly
+if ('navigator' in window && 'connection' in navigator) {
+    const connection = navigator.connection;
+    
+    // Reduce animations on slow connections
+    if (connection.effectiveType === '2g' || connection.effectiveType === 'slow-2g') {
+        document.documentElement.style.setProperty('--transition', 'none');
+        AOS.init({ disable: true });
+    }
+}
+
+// Add CSS for loading states
+const loadingCSS = `
+    .loading {
+        position: relative;
+        pointer-events: none;
+        opacity: 0.7;
+    }
+    
+    .loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin: -10px 0 0 -10px;
+        border: 2px solid transparent;
+        border-top: 2px solid var(--primary-color);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        z-index: 1000;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+`;
+
+const style = document.createElement('style');
+style.textContent = loadingCSS;
+document.head.appendChild(style);
+
 console.log('المحفظة الذكية - تم تحميل JavaScript بنجاح! 🚀');
+console.log('تم تفعيل تحسينات الأجهزة المحمولة 📱');

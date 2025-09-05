@@ -1,0 +1,132 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+  <!-- Background Elements -->
+  <defs>
+    <linearGradient id="cardGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:0.9"/>
+    </linearGradient>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="phoneGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#a8edea;stop-opacity:0.1"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Main Smartphone -->
+  <g transform="translate(350, 100)">
+    <!-- Phone Body -->
+    <rect x="0" y="0" width="180" height="320" rx="25" fill="#1f2937" filter="url(#glow1)"/>
+    <rect x="8" y="8" width="164" height="304" rx="20" fill="url(#phoneGlow)"/>
+    <rect x="12" y="12" width="156" height="296" rx="18" fill="url(#cardGradient1)" stroke="#e5e7eb"/>
+    
+    <!-- Phone Header -->
+    <rect x="16" y="16" width="148" height="40" rx="10" fill="#3b82f6"/>
+    <text x="90" y="40" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">المحفظة الذكية</text>
+    
+    <!-- Balance Display -->
+    <rect x="20" y="70" width="140" height="60" rx="12" fill="#f0f9ff" stroke="#dbeafe" stroke-width="2"/>
+    <text x="90" y="90" font-family="Arial, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">الرصيد الحالي</text>
+    <text x="90" y="110" font-family="Arial, sans-serif" font-size="18" fill="#3b82f6" text-anchor="middle" font-weight="bold">127,850 ر.س</text>
+    <text x="90" y="125" font-family="Arial, sans-serif" font-size="8" fill="#10b981" text-anchor="middle">+12.4% هذا الشهر</text>
+    
+    <!-- Quick Actions -->
+    <g transform="translate(20, 145)">
+      <!-- Send Button -->
+      <rect x="0" y="0" width="45" height="35" rx="8" fill="#dc2626" opacity="0.1"/>
+      <text x="22.5" y="15" font-family="Arial, sans-serif" font-size="12" fill="#dc2626" text-anchor="middle">📤</text>
+      <text x="22.5" y="30" font-family="Arial, sans-serif" font-size="7" fill="#dc2626" text-anchor="middle" font-weight="bold">إرسال</text>
+      
+      <!-- Receive Button -->
+      <rect x="50" y="0" width="45" height="35" rx="8" fill="#10b981" opacity="0.1"/>
+      <text x="72.5" y="15" font-family="Arial, sans-serif" font-size="12" fill="#10b981" text-anchor="middle">📥</text>
+      <text x="72.5" y="30" font-family="Arial, sans-serif" font-size="7" fill="#10b981" text-anchor="middle" font-weight="bold">استلام</text>
+      
+      <!-- Invest Button -->
+      <rect x="100" y="0" width="40" height="35" rx="8" fill="#8b5cf6" opacity="0.1"/>
+      <text x="120" y="15" font-family="Arial, sans-serif" font-size="12" fill="#8b5cf6" text-anchor="middle">📈</text>
+      <text x="120" y="30" font-family="Arial, sans-serif" font-size="7" fill="#8b5cf6" text-anchor="middle" font-weight="bold">استثمار</text>
+    </g>
+    
+    <!-- AI Insights Panel -->
+    <rect x="20" y="195" width="140" height="80" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="90" y="210" font-family="Arial, sans-serif" font-size="10" fill="#92400e" text-anchor="middle" font-weight="bold">💡 نصائح ذكية</text>
+    <text x="90" y="225" font-family="Arial, sans-serif" font-size="8" fill="#92400e" text-anchor="middle">يمكنك توفير 850 ر.س</text>
+    <text x="90" y="237" font-family="Arial, sans-serif" font-size="8" fill="#92400e" text-anchor="middle">هذا الشهر من خلال تقليل</text>
+    <text x="90" y="249" font-family="Arial, sans-serif" font-size="8" fill="#92400e" text-anchor="middle">مصروفات الترفيه بنسبة 15%</text>
+    <rect x="30" y="255" width="120" height="15" rx="7" fill="#f59e0b" opacity="0.2"/>
+    <text x="90" y="265" font-family="Arial, sans-serif" font-size="8" fill="#f59e0b" text-anchor="middle" font-weight="bold">تطبيق التوصية</text>
+    
+    <!-- Navigation Bar -->
+    <g transform="translate(20, 285)">
+      <rect x="0" y="0" width="140" height="25" rx="10" fill="#f3f4f6"/>
+      <text x="20" y="15" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6" text-anchor="middle">🏠</text>
+      <text x="50" y="15" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">📊</text>
+      <text x="80" y="15" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">💳</text>
+      <text x="110" y="15" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">⚙️</text>
+    </g>
+  </g>
+  
+  <!-- Feature Highlights Around Phone -->
+  <g transform="translate(200, 180)">
+    <rect x="0" y="0" width="120" height="60" rx="15" fill="white" stroke="#ec4899" stroke-width="2" filter="url(#glow1)"/>
+    <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ec4899" text-anchor="middle" font-weight="bold">🔒 أمان متطور</text>
+    <text x="60" y="40" font-family="Arial, sans-serif" font-size="9" fill="#be185d" text-anchor="middle">حماية بالذكاء الاصطناعي</text>
+    <text x="60" y="52" font-family="Arial, sans-serif" font-size="9" fill="#be185d" text-anchor="middle">و بصمة الوجه</text>
+  </g>
+  
+  <g transform="translate(580, 180)">
+    <rect x="0" y="0" width="120" height="60" rx="15" fill="white" stroke="#10b981" stroke-width="2" filter="url(#glow1)"/>
+    <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" fill="#10b981" text-anchor="middle" font-weight="bold">⚡ معاملات فورية</text>
+    <text x="60" y="40" font-family="Arial, sans-serif" font-size="9" fill="#065f46" text-anchor="middle">تحويل في أقل من ثانية</text>
+    <text x="60" y="52" font-family="Arial, sans-serif" font-size="9" fill="#065f46" text-anchor="middle">وبرسوم منخفضة</text>
+  </g>
+  
+  <g transform="translate(280, 350)">
+    <rect x="0" y="0" width="140" height="60" rx="15" fill="white" stroke="#8b5cf6" stroke-width="2" filter="url(#glow1)"/>
+    <text x="70" y="25" font-family="Arial, sans-serif" font-size="12" fill="#8b5cf6" text-anchor="middle" font-weight="bold">🎯 استثمار ذكي</text>
+    <text x="70" y="40" font-family="Arial, sans-serif" font-size="9" fill="#6b21a8" text-anchor="middle">محفظة استثمارية متوازنة</text>
+    <text x="70" y="52" font-family="Arial, sans-serif" font-size="9" fill="#6b21a8" text-anchor="middle">بمساعدة الذكاء الاصطناعي</text>
+  </g>
+  
+  <g transform="translate(500, 350)">
+    <rect x="0" y="0" width="120" height="60" rx="15" fill="white" stroke="#f59e0b" stroke-width="2" filter="url(#glow1)"/>
+    <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" fill="#f59e0b" text-anchor="middle" font-weight="bold">📊 تحليل مالي</text>
+    <text x="60" y="40" font-family="Arial, sans-serif" font-size="9" fill="#92400e" text-anchor="middle">تقارير شاملة وتوقعات</text>
+    <text x="60" y="52" font-family="Arial, sans-serif" font-size="9" fill="#92400e" text-anchor="middle">مالية دقيقة</text>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,5" opacity="0.5">
+    <line x1="320" y1="210" x2="350" y2="250"/>
+    <line x1="580" y1="210" x2="530" y2="250"/>
+    <line x1="350" y1="380" x2="420" y2="350"/>
+    <line x1="560" y1="380" x2="500" y2="350"/>
+  </g>
+  
+  <!-- Floating Elements -->
+  <circle cx="150" cy="120" r="8" fill="#3b82f6" opacity="0.3">
+    <animate attributeName="cy" values="120;100;120" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="650" cy="300" r="6" fill="#ec4899" opacity="0.4">
+    <animate attributeName="cy" values="300;280;300" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="100" cy="450" r="7" fill="#10b981" opacity="0.3">
+    <animate attributeName="cy" values="450;430;450" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="720" cy="150" r="5" fill="#8b5cf6" opacity="0.4">
+    <animate attributeName="cy" values="150;135;150" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Top Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" fill="#1f2937" text-anchor="middle" font-weight="bold">المحفظة الذكية الجديدة</text>
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">تجربة مصرفية متطورة بالذكاء الاصطناعي</text>
+</svg>

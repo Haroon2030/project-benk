@@ -2,8 +2,36 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>المحفظة الذكية بالذكاء الاصطناعي - بنك البلاد</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="assets/icons/logo.svg">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="البنك الاستباقي الذي يفهمك قبل أن تسأل - محفظة ذكية بالذكاء الاصطناعي من بنك البلاد">
+    <meta name="keywords" content="بنك البلاد, محفظة ذكية, ذكاء اصطناعي, تقنيات مالية, هاكاثون, رؤية 2030">
+    <meta name="author" content="بنك البلاد - فريق الابتكار">
+    <meta name="theme-color" content="#1e40af">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="المحفظة الذكية بالذكاء الاصطناعي - بنك البلاد">
+    <meta property="og:description" content="البنك الاستباقي الذي يفهمك قبل أن تسأل">
+    <meta property="og:image" content="assets/images/hero-illustration.svg">
+    <meta property="og:url" content="https://albilad-smart-wallet.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="المحفظة الذكية - بنك البلاد">
+    <meta name="twitter:description" content="تجربة مصرفية ذكية واستباقية">
+    <meta name="twitter:image" content="assets/images/hero-illustration.svg">
     
     <!-- Bootstrap 5 RTL -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
@@ -24,10 +52,10 @@
 
     <!-- Header -->
     <header class="hero-section">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="https://via.placeholder.com/50x50/ffffff/000000?text=B" alt="بنك البلاد" class="me-2 rounded-circle">
+                    <img src="assets/icons/logo.svg" alt="بنك البلاد" class="me-2 logo-image">
                     <span class="fw-bold">بنك البلاد</span>
                 </a>
                 
@@ -38,10 +66,23 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#demo-videos">الفيديوهات</a></li>
                         <li class="nav-item"><a class="nav-link" href="#problem">المشكلة</a></li>
                         <li class="nav-item"><a class="nav-link" href="#solution">الحل</a></li>
                         <li class="nav-item"><a class="nav-link" href="#features">المميزات</a></li>
                         <li class="nav-item"><a class="nav-link" href="#vision">الرؤية</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                المزيد
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#how-it-works">كيف يعمل</a></li>
+                                <li><a class="dropdown-item" href="#proactive-banking">البنك الاستباقي</a></li>
+                                <li><a class="dropdown-item" href="#detailed-presentation">العرض التفصيلي</a></li>
+                                <li><a class="dropdown-item" href="#testimonials">آراء الخبراء</a></li>
+                                <li><a class="dropdown-item" href="#roadmap">خريطة الطريق</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -71,30 +112,91 @@
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
-                        <div class="hero-image">
-                            <img src="https://illustrations.popsy.co/amber/man-with-a-tablet.svg" alt="المحفظة الذكية" class="img-fluid floating">
+                        <div class="hero-image text-center">
+                            <img src="assets/images/hero-illustration.svg" alt="المحفظة الذكية" class="img-fluid floating" style="max-width: 500px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Video Demo Section -->
+    <section class="video-demo-section py-5" id="demo-videos">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">شاهد العرض التوضيحي</h2>
+                    <p class="section-subtitle">تعرف على المحفظة الذكية من خلال الفيديوهات التوضيحية</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Video 1: المقدمة -->
+                <div class="col-lg-6 col-md-12" data-aos="fade-right">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls poster="assets/images/hero-illustration.svg" class="video-player">
+                                <source src="assets/videos/المقدمه.mp4" type="video/mp4">
+                                متصفحك لا يدعم تشغيل الفيديو.
+                            </video>
+                            <div class="video-overlay">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>مقدمة عن المحفظة الذكية</h4>
+                            <p>تعرف على مفهوم المحفظة الذكية وكيف ستغير مستقبل الخدمات المصرفية</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-clock me-1"></i> 3 دقائق</span>
+                                <span><i class="fas fa-eye me-1"></i> عرض تقديمي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2: تحديات العملاء -->
+                <div class="col-lg-6 col-md-12" data-aos="fade-left">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls poster="assets/images/woman-tablet.svg" class="video-player">
+                                <source src="assets/videos/تحديات العملاء.mp4" type="video/mp4">
+                                متصفحك لا يدعم تشغيل الفيديو.
+                            </video>
+                            <div class="video-overlay">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>تحديات العملاء الحالية</h4>
+                            <p>نظرة على المشاكل التي يواجهها العملاء مع البنوك التقليدية وكيف نحلها</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-clock me-1"></i> 4 دقائق</span>
+                                <span><i class="fas fa-users me-1"></i> تحليل العملاء</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Floating Elements -->
-            <div class="floating-elements">
-                <div class="floating-card card-1">
-                    <i class="fas fa-brain"></i>
-                    <span>ذكاء اصطناعي</span>
-                </div>
-                <div class="floating-card card-2">
-                    <i class="fas fa-chart-line"></i>
-                    <span>تحليل مالي</span>
-                </div>
-                <div class="floating-card card-3">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>أمان متقدم</span>
+            <!-- Call to Action -->
+            <div class="row mt-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <div class="video-cta">
+                        <h3>مستعد لتجربة البنك الذكي؟</h3>
+                        <p>انضم إلى آلاف العملاء الذين اختاروا الحل الأذكى للخدمات المصرفية</p>
+                        <button class="btn btn-primary btn-lg">
+                            <i class="fas fa-rocket me-2"></i>
+                            ابدأ التجربة الآن
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- Problem Section -->
     <section class="problem-section" id="problem">
@@ -136,7 +238,65 @@
             </div>
             <div class="row mt-5">
                 <div class="col-12 text-center" data-aos="fade-up">
-                    <img src="https://illustrations.popsy.co/amber/woman-and-tablet.svg" alt="مشاكل البنوك التقليدية" class="img-fluid" style="max-width: 400px;">
+                    <img src="assets/images/woman-tablet.svg" alt="مشاكل البنوك التقليدية" class="img-fluid" style="max-width: 400px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works-section" id="how-it-works">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">كيف تعمل المحفظة الذكية؟</h2>
+                    <p class="section-subtitle">رحلة العميل مع التكنولوجيا المتقدمة في 4 خطوات بسيطة</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h4>التسجيل الذكي</h4>
+                        <p>تسجيل بسيط وآمن مع تحليل أولي لملفك المالي باستخدام الذكاء الاصطناعي</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>التحليل المستمر</h4>
+                        <p>مراقبة وتحليل عادات الإنفاق والادخار لفهم سلوكك المالي بشكل عميق</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>التوصيات الذكية</h4>
+                        <p>اقتراحات مخصصة للادخار والاستثمار وعروض الشراكات المناسبة لك</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>التطور المستمر</h4>
+                        <p>تحسين مستمر للخدمات بناءً على تفاعلك لتقديم تجربة أفضل دائماً</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -187,7 +347,289 @@
                 
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="solution-image">
-                        <img src="https://illustrations.popsy.co/amber/app-development.svg" alt="الحل الذكي" class="img-fluid">
+                        <div class="solution-image text-center">
+                            <img src="assets/images/app-development.svg" alt="الحل الذكي" class="img-fluid" style="max-width: 450px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proactive Banking Section -->
+    <section class="proactive-banking-section" id="proactive-banking">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title gradient-text">البنك الاستباقي</h2>
+                    <p class="section-subtitle">منصة ذكاء اصطناعي متكاملة تتوقع وتتصرف بدلاً من أن تكتفي بالرد</p>
+                </div>
+            </div>
+            
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="proactive-content">
+                        <h3 class="mb-4">كيف يعمل البنك الاستباقي؟</h3>
+                        
+                        <div class="proactive-features">
+                            <div class="proactive-item">
+                                <div class="proactive-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="proactive-text">
+                                    <h5>جمع البيانات الذكي</h5>
+                                    <p>تجمع بيانات العميل (دخل، إنفاق، أهداف، أحداث حياته) وتربطها بالذكاء الاصطناعي</p>
+                                </div>
+                            </div>
+                            
+                            <div class="proactive-item">
+                                <div class="proactive-icon">
+                                    <i class="fas fa-crystal-ball"></i>
+                                </div>
+                                <div class="proactive-text">
+                                    <h5>التوقع والتنبؤ</h5>
+                                    <p>تتوقع احتياجات العميل وتتصرف بدلاً من أن تكتفي بالرد على الاستفسارات</p>
+                                </div>
+                            </div>
+                            
+                            <div class="proactive-item">
+                                <div class="proactive-icon">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <div class="proactive-text">
+                                    <h5>التوصيات الاستباقية</h5>
+                                    <p>ترسل توصيات واستشارات قبل أن يحتاجها العميل في الوقت المناسب</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="proactive-image text-center">
+                        <img src="assets/images/data-analysis.svg" alt="البنك الاستباقي" class="img-fluid" style="max-width: 450px;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Real Examples Section -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="examples-section">
+                        <h3 class="text-center mb-5" data-aos="fade-up">أمثلة واقعية للبنك الاستباقي</h3>
+                        
+                        <div class="row">
+                            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="example-card">
+                                    <div class="example-icon">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div class="example-content">
+                                        <h5>قبل موعد الفاتورة</h5>
+                                        <p class="example-notification">"إذا أجلت شراء جهازك الجديد أسبوعين، تقدر تدفع الفاتورة بدون ضغط."</p>
+                                        <span class="example-timing">قبل أسبوع من دفع الفاتورة</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="example-card">
+                                    <div class="example-icon">
+                                        <i class="fas fa-piggy-bank"></i>
+                                    </div>
+                                    <div class="example-content">
+                                        <h5>عند استلام الراتب</h5>
+                                        <p class="example-notification">يقترح تلقائياً خطة ادخار مناسبة للشهر بناءً على نمط إنفاقك</p>
+                                        <span class="example-timing">فور وصول الراتب</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                                <div class="example-card">
+                                    <div class="example-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="example-content">
+                                        <h5>عند زيادة الإنفاق</h5>
+                                        <p class="example-notification">"تجاوزت ميزانية المطاعم بـ 25%، اقترح تقليل طلعة وحدة هذا الأسبوع لتبقى ضمن الخطة."</p>
+                                        <span class="example-timing">عند تجاوز الحد المحدد</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                                <div class="example-card">
+                                    <div class="example-icon">
+                                        <i class="fas fa-tags"></i>
+                                    </div>
+                                    <div class="example-content">
+                                        <h5>العروض الذكية</h5>
+                                        <p class="example-notification">إشعار تلقائي بخصومات على منتج تبحث عنه مع عرض شراكة من البنك</p>
+                                        <span class="example-timing">عند توفر عروض مناسبة</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Presentation Section -->
+    <section class="detailed-presentation-section" id="detailed-presentation">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">العرض التقديمي التفصيلي</h2>
+                    <p class="section-subtitle">رؤية شاملة للمحفظة الذكية ومساهمتها في تحقيق أهداف بنك البلاد</p>
+                </div>
+            </div>
+            
+            <!-- Problem Analysis -->
+            <div class="presentation-block" data-aos="fade-up">
+                <div class="block-header">
+                    <h3><i class="fas fa-search me-3"></i>تحليل عميق للمشكلة</h3>
+                </div>
+                <div class="block-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5>التحديات المالية اليومية:</h5>
+                            <ul class="detailed-list">
+                                <li><strong>ضعف التوعية المالية:</strong> يجد العملاء صعوبة في فهم وتحليل مصاريفهم</li>
+                                <li><strong>غياب الإرشاد الشخصي:</strong> يحتاج العملاء إلى مستشار مالي متاح 24/7</li>
+                                <li><strong>ضياع الفرص:</strong> يفوت العملاء فرصاً للتوفير بسبب غياب المعلومة</li>
+                                <li><strong>تشتت الأدوات:</strong> استخدام تطبيقات مختلفة يسبب تشتتاً</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="problem-highlight">
+                                <h5>الفجوة في السوق</h5>
+                                <p>هذه التحديات حقيقية وغير مغطاة بالكامل في الخدمات المصرفية الحالية، وتشكل فجوة كبيرة يمكن تحويلها إلى فرصة استثمارية ضخمة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Innovation in Financial Services -->
+            <div class="presentation-block" data-aos="fade-up">
+                <div class="block-header">
+                    <h3><i class="fas fa-lightbulb me-3"></i>الابتكار في الخدمات المالية</h3>
+                </div>
+                <div class="block-content">
+                    <div class="service-showcase">
+                        <div class="service-item">
+                            <h5>المستشار المالي الذكي (AI Financial Advisor)</h5>
+                            <p><strong>الخدمة:</strong> مستشار مالي تفاعلي يعمل بالذكاء الاصطناعي، يرد على استفسارات العميل ويقدم نصائح مخصصة.</p>
+                            <p><strong>القيمة المضافة:</strong> يرفع مستوى الوعي المالي لدى العميل ويحوله من مجرد مستخدم لخدمات البنك إلى شريك في إدارة أمواله.</p>
+                        </div>
+                        
+                        <div class="service-item">
+                            <h5>اقتراحات المنتجات الذكية</h5>
+                            <p><strong>الخدمة:</strong> يحلل المستشار المالي طلبات العميل ويقدم قائمة بمنتجات مختارة تتوافق مع ميزانيته واهتماماته.</p>
+                            <p><strong>القيمة المضافة:</strong> يحول المحفظة من أداة صرف إلى منصة لإدارة الشراء الذكي مع إيرادات إضافية من الشراكات.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vision 2030 Alignment -->
+            <div class="presentation-block" data-aos="fade-up">
+                <div class="block-header">
+                    <h3><i class="fas fa-flag me-3"></i>الارتباط برؤية المملكة 2030</h3>
+                </div>
+                <div class="block-content">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="vision-pillar">
+                                <h5>مجتمع حيوي</h5>
+                                <ul>
+                                    <li>رفع مستوى الوعي المالي</li>
+                                    <li>تحفيز الادخار والاستقرار المالي</li>
+                                    <li>دعم القرارات المالية الذكية</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="vision-pillar">
+                                <h5>اقتصاد مزدهر</h5>
+                                <ul>
+                                    <li>الابتكار في التقنيات المالية</li>
+                                    <li>تحويل الاقتصاد الرقمي</li>
+                                    <li>تنويع مصادر الدخل</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="vision-pillar">
+                                <h5>وطن طموح</h5>
+                                <ul>
+                                    <li>التحول الرقمي الشامل</li>
+                                    <li>كفاءة الأداء والخدمات</li>
+                                    <li>تطوير المهارات التقنية</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title text-white">أرقام تتحدث عن التأثير</h2>
+                    <p class="section-subtitle text-white opacity-75">إحصائيات توضح قوة الذكاء الاصطناعي في الخدمات المالية</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number counter" data-target="85">0</div>
+                        <div class="stat-unit">%</div>
+                        <div class="stat-label">تحسن في رضا العملاء</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <div class="stat-number counter" data-target="67">0</div>
+                        <div class="stat-unit">%</div>
+                        <div class="stat-label">زيادة في معدلات الادخار</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-number counter" data-target="24">0</div>
+                        <div class="stat-unit">/7</div>
+                        <div class="stat-label">خدمة مستمرة</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-number counter" data-target="92">0</div>
+                        <div class="stat-unit">%</div>
+                        <div class="stat-label">دقة التوصيات</div>
                     </div>
                 </div>
             </div>
@@ -265,6 +707,268 @@
                     </div>
                 </div>
             </div>
+            <!-- Technical Implementation -->
+            <div class="presentation-block" data-aos="fade-up">
+                <div class="block-header">
+                    <h3><i class="fas fa-cogs me-3"></i>الجانب التقني والتقنيات المستخدمة</h3>
+                </div>
+                <div class="block-content">
+                    <div class="tech-grid">
+                        <div class="tech-detail-item">
+                            <div class="tech-detail-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="tech-detail-content">
+                                <h5>الذكاء الاصطناعي والتعلم الآلي</h5>
+                                <p>يُستخدم في تطوير المستشار المالي، وتحليل أنماط الإنفاق، والتنبؤ بالاحتياجات المالية المستقبلية للعميل.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-detail-item">
+                            <div class="tech-detail-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div class="tech-detail-content">
+                                <h5>معالجة اللغات الطبيعية (NLP)</h5>
+                                <p>تمكن المحفظة من فهم وتحليل استفسارات العميل النصية والصوتية، وتقديم ردود ذات صلة وطبيعية.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-detail-item">
+                            <div class="tech-detail-icon">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <div class="tech-detail-content">
+                                <h5>واجهات برمجة التطبيقات (APIs)</h5>
+                                <p>تُستخدم لتكامل خدمات المحفظة مع الأنظمة البنكية الأساسية بشكل آمن، مع الالتزام بأحدث معايير الخدمات المصرفية المفتوحة.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-detail-item">
+                            <div class="tech-detail-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="tech-detail-content">
+                                <h5>أمن البيانات</h5>
+                                <p>يتم تشفير جميع البيانات المالية للمستخدمين لضمان أعلى مستويات الخصوصية والأمان.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-detail-item">
+                            <div class="tech-detail-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="tech-detail-content">
+                                <h5>المنصات السحابية</h5>
+                                <p>يتم استضافة التطبيق على منصات سحابية قوية لتوفير المرونة، وقابلية التوسع، وضمان استمرارية الخدمة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Revenue Strategy -->
+            <div class="presentation-block" data-aos="fade-up">
+                <div class="block-header">
+                    <h3><i class="fas fa-chart-line me-3"></i>استراتيجيات تحقيق الدخل وخارطة الطريق</h3>
+                </div>
+                <div class="block-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5 class="mb-4">استراتيجيات تحقيق الدخل:</h5>
+                            <div class="revenue-item">
+                                <h6>الشراكات التجارية</h6>
+                                <p>تحقيق إيرادات إضافية من خلال الحصول على عمولة من المتاجر والعلامات التجارية مقابل كل عملية شراء تتم من خلال توصيات المحفظة الذكية.</p>
+                            </div>
+                            <div class="revenue-item">
+                                <h6>الخدمات المتميزة</h6>
+                                <p>تقديم باقات اشتراك مدفوعة تشمل ميزات متقدمة مثل التقارير المالية التفصيلية، أدوات التخطيط المالي طويل المدى، والتحليلات الاستثمارية المخصصة.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5 class="mb-4">مقترحات إضافية لتعزيز المشروع:</h5>
+                            <ul class="enhancement-list">
+                                <li><strong>التخطيط المالي التنبؤي:</strong> التنبؤ بالاحتياجات المالية المستقبلية</li>
+                                <li><strong>التحديات المالية والألعاب:</strong> تحويل الادخار إلى لعبة تفاعلية</li>
+                                <li><strong>الدمج مع برامج الولاء:</strong> ربط المحفظة ببرامج الولاء الخاصة بالشركاء</li>
+                                <li><strong>المحفظة العائلية:</strong> خدمة متكاملة للعائلات مع محافظ فرعية للأبناء</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Final Summary -->
+            <div class="presentation-block summary-block" data-aos="fade-up">
+                <div class="block-header">
+                    <h3><i class="fas fa-star me-3"></i>الملخص والاستنتاج</h3>
+                </div>
+                <div class="block-content">
+                    <div class="summary-content">
+                        <div class="summary-highlight">
+                            <h4>تخيل محفظة تفهمك قبل لا تسأل!</h4>
+                            <p class="lead">توجهك لأفضل قراراتك المالية، وتخلي كل ريال يشتغل لصالحك! المحفظة الذكية بالذكاء الاصطناعي تجيب حلول لمشاكل ضعف التوعية المالية، غياب الإرشاد الشخصي، وتشتت التطبيقات.</p>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-lg-4">
+                                <div class="summary-point">
+                                    <h6>مستشار مالي ذكي 24/7</h6>
+                                    <p>يعطيك نصائح شخصية ويخليك تتحكم بأموالك بذكاء</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="summary-point">
+                                    <h6>تجربة متكاملة</h6>
+                                    <p>اقتراحات منتجات، واجهة سهلة، ومساعد صوتي على كل أجهزتك</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="summary-point">
+                                    <h6>قيمة استراتيجية</h6>
+                                    <p>يقوي ولاء العملاء، يفتح فرص دخل جديدة، ويدعم رؤية 2030</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="final-statement">
+                            <h4>باختصار، المحفظة الذكية مو بس أداة مالية،</h4>
+                            <p class="highlight-text">لكنها تجربة مبتكرة تخلي بنك البلاد في الصدارة وتغير مستقبل العميل المالي بالكامل!</p>
+                            
+                            <div class="closing-question">
+                                <h3>هل أنتم مستعدون للانتقال بالخدمات المصرفية إلى مستوى جديد من الذكاء والشمولية؟</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">ماذا يقول خبراء الصناعة؟</h2>
+                    <p class="section-subtitle">آراء المختصين في التكنولوجيا المالية حول مستقبل البنوك الذكية</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"المحفظة الذكية تمثل نقلة نوعية في الخدمات المصرفية. الذكاء الاصطناعي الاستباقي سيغير مستقبل التعامل المالي تماماً."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="author-info">
+                                <h5>د. أحمد المالكي</h5>
+                                <span>خبير التكنولوجيا المالية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"هذا النوع من الابتكار هو ما نحتاجه لتحقيق أهداف رؤية 2030 في التحول الرقمي وتطوير القطاع المالي السعودي."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h5>أ. فاطمة العتيبي</h5>
+                                <span>محللة اقتصادية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"التطبيق يجمع بين البساطة والذكاء. سيساعد في رفع مستوى الوعي المالي وتحسين القرارات الاستثمارية للمواطنين."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-cog"></i>
+                            </div>
+                            <div class="author-info">
+                                <h5>م. سعد الغامدي</h5>
+                                <span>مطور تطبيقات مالية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section class="tech-stack-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">التقنيات المتقدمة</h2>
+                    <p class="section-subtitle">نستخدم أحدث التقنيات لضمان أفضل تجربة وأقصى مستويات الأمان</p>
+                </div>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="tech-content">
+                        <h3 class="mb-4">مجموعة تقنية متكاملة</h3>
+                        
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <i class="fas fa-brain"></i>
+                                <div>
+                                    <h5>Machine Learning</h5>
+                                    <p>خوارزميات تعلم آلي متطورة لتحليل البيانات والتنبؤ بالاحتياجات</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h5>Blockchain Security</h5>
+                                    <p>تشفير متقدم وأمان على مستوى البلوك تشين لحماية البيانات</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-item">
+                                <i class="fas fa-cloud"></i>
+                                <div>
+                                    <h5>Cloud Computing</h5>
+                                    <p>بنية تحتية سحابية قابلة للتوسع والتطوير المستمر</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <h5>Mobile First</h5>
+                                    <p>تصميم يعطي الأولوية للهواتف الذكية مع تجربة سلسة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="tech-image">
+                        <div class="text-center">
+                            <img src="assets/images/artificial-intelligence.svg" alt="التقنيات المتقدمة" class="img-fluid" style="max-width: 400px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -274,7 +978,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="value-image">
-                        <img src="https://illustrations.popsy.co/amber/business-deal.svg" alt="القيمة المضافة" class="img-fluid">
+                        <div class="text-center">
+                            <img src="assets/images/business-deal.svg" alt="القيمة المضافة" class="img-fluid" style="max-width: 400px;">
+                        </div>
                     </div>
                 </div>
                 
@@ -305,6 +1011,84 @@
                                 <p>تعزيز صورة البنك كرائد في التكنولوجيا المالية</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="roadmap-section" id="roadmap">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">خريطة الطريق للمستقبل</h2>
+                    <p class="section-subtitle">خطة التطوير والتوسع للمحفظة الذكية على مراحل زمنية محددة</p>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-marker">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>المرحلة الأولى</h4>
+                        <span class="timeline-date">الربع الأول 2026</span>
+                        <p>إطلاق النسخة التجريبية مع الميزات الأساسية: التحليل المالي، التوصيات البسيطة، وواجهة المستخدم الأساسية.</p>
+                        <ul>
+                            <li>تحليل الإنفاق الأساسي</li>
+                            <li>توصيات الادخار البسيطة</li>
+                            <li>واجهة مستخدم سهلة</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-marker">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>المرحلة الثانية</h4>
+                        <span class="timeline-date">الربع الثالث 2026</span>
+                        <p>إضافة الذكاء الاصطناعي المتقدم والشراكات التجارية الأولى مع التحليل العميق للسلوك المالي.</p>
+                        <ul>
+                            <li>AI متقدم للتنبؤ</li>
+                            <li>شراكات مع المتاجر</li>
+                            <li>تحليل سلوكي عميق</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-marker">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>المرحلة الثالثة</h4>
+                        <span class="timeline-date">الربع الأول 2027</span>
+                        <p>التوسع الإقليمي وإضافة خدمات الاستثمار الذكي مع دعم العملات المتعددة والأسواق الإقليمية.</p>
+                        <ul>
+                            <li>خدمات الاستثمار الذكي</li>
+                            <li>دعم العملات المتعددة</li>
+                            <li>التوسع الإقليمي</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-marker">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>المرحلة الرابعة</h4>
+                        <span class="timeline-date">2027+</span>
+                        <p>أن نصبح المنصة المالية الذكية الرائدة في الشرق الأوسط مع خدمات مصرفية شاملة ومتكاملة.</p>
+                        <ul>
+                            <li>منصة مالية شاملة</li>
+                            <li>ريادة إقليمية</li>
+                            <li>خدمات مبتكرة متقدمة</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -355,7 +1139,9 @@
             
             <div class="row mt-5">
                 <div class="col-12 text-center" data-aos="fade-up">
-                    <img src="https://illustrations.popsy.co/amber/growth-analytics.svg" alt="رؤية 2030" class="img-fluid" style="max-width: 500px;">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <img src="assets/images/growth-analytics.svg" alt="رؤية 2030" class="img-fluid" style="max-width: 500px;">
+                </div>
                 </div>
             </div>
         </div>
@@ -402,6 +1188,117 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- Main Footer Content -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-brand">
+                        <img src="assets/icons/logo.svg" alt="بنك البلاد" class="footer-logo">
+                        <h4>المحفظة الذكية</h4>
+                        <p>البنك الاستباقي بالذكاء الاصطناعي - مستقبل الخدمات المصرفية</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#demo-videos">الفيديوهات</a></li>
+                        <li><a href="#features">المميزات</a></li>
+                        <li><a href="#vision">الرؤية</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>الخدمات</h5>
+                    <ul class="footer-links">
+                        <li><a href="#proactive-banking">البنك الاستباقي</a></li>
+                        <li><a href="#how-it-works">كيف يعمل</a></li>
+                        <li><a href="#testimonials">آراء الخبراء</a></li>
+                        <li><a href="#roadmap">خريطة الطريق</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact & Developer Info -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>معلومات التطوير</h5>
+                    <div class="developer-info">
+                        <div class="developer-card">
+                            <div class="developer-avatar">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="developer-details">
+                                <h6>المهندس هارون الأهدل</h6>
+                                <p class="developer-role">مطور الموقع</p>
+                                <div class="contact-info">
+                                    <a href="tel:+966591076092" class="contact-link">
+                                        <i class="fas fa-phone"></i>
+                                        <span>0591076092</span>
+                                    </a>
+                                    <div class="social-links-footer">
+                                        <a href="https://wa.me/966591076092" target="_blank" title="واتساب" class="social-link-footer">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                        <a href="tg://resolve?domain=harun_alahdal" target="_blank" title="تليجرام" class="social-link-footer">
+                                            <i class="fab fa-telegram"></i>
+                                        </a>
+                                        <a href="mailto:harun.alahdal@gmail.com" title="إيميل" class="social-link-footer">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright">
+                            <p>&copy; 2025 جميع الحقوق محفوظة للمهندس هارون الأهدل</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="footer-meta">
+                            <span class="badge bg-primary">
+                                <i class="fas fa-rocket me-1"></i>
+                                هاكاثون بنك البلاد 2025
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Background Elements -->
+        <div class="footer-bg">
+            <div class="footer-pattern"></div>
+        </div>
+    </footer>
+
+    <!-- Floating Developer Contact -->
+    <div class="floating-developer-contact">
+        <div class="developer-contact-btn" data-bs-toggle="tooltip" data-bs-placement="left" title="تواصل مع المطور">
+            <a href="https://wa.me/966591076092" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <div class="developer-info-tooltip">
+            <div class="tooltip-content">
+                <h6>المهندس هارون الأهدل</h6>
+                <p>مطور الموقع</p>
+                <span>0591076092</span>
+            </div>
+        </div>
+    </div>
+
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     

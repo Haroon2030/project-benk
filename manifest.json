@@ -1,0 +1,81 @@
+{
+  "name": "المحفظة الذكية بالذكاء الاصطناعي - بنك البلاد",
+  "short_name": "المحفظة الذكية",
+  "description": "البنك الاستباقي الذي يفهمك قبل أن تسأل",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "background_color": "#667eea",
+  "theme_color": "#1e40af",
+  "orientation": "any",
+  "lang": "ar",
+  "dir": "rtl",
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 480
+  },
+  "icons": [
+    {
+      "src": "assets/icons/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml", 
+      "sizes": "32x32 64x64 128x128 256x256 512x512",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["finance", "productivity", "business", "banking"],
+  "shortcuts": [
+    {
+      "name": "شاهد العرض التقديمي",
+      "short_name": "العرض",
+      "description": "مشاهدة العرض التقديمي للمحفظة الذكية",
+      "url": "/#demo-videos",
+      "icons": [
+        {
+          "src": "assets/icons/logo.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "المميزات",
+      "short_name": "المميزات",
+      "description": "تصفح مميزات المحفظة الذكية",
+      "url": "/#features",
+      "icons": [
+        {
+          "src": "assets/icons/logo.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/images/hero-illustration.svg",
+      "type": "image/svg+xml",
+      "sizes": "1280x720",
+      "form_factor": "wide",
+      "label": "الصفحة الرئيسية - سطح المكتب"
+    },
+    {
+      "src": "assets/images/mobile-banking.svg", 
+      "type": "image/svg+xml",
+      "sizes": "390x844",
+      "form_factor": "narrow",
+      "label": "تطبيق الهاتف المحمول"
+    }
+  ],
+  "related_applications": [],
+  "protocol_handlers": [],
+  "file_handlers": [],
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "navigate-new"]
+  }
+}
